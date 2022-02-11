@@ -11,6 +11,8 @@ class _0005: Case {
     }
 
     class Solution {
+
+        // O(n) = n平方，Manacher算法更为效率( = n)
         fun longestPalindrome(s: String): String {
             var start = 0
             var end = 0
