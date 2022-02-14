@@ -1,5 +1,6 @@
 import leetcode._0005
 import leetcode._0014
+import leetcode._0043
 import leetcode._0567
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -42,6 +43,18 @@ class TestCases {
             arrayOf("ab", "eidboaoo")
         )
         val result = arrayOf("false", "true", "false")
+        for (i in inputs.indices) {
+            assertEquals(case.exec(inputs[i]).getOrNull(0), result[i])
+        }
+    }
+
+    @Test
+    fun test0043() {
+        val case = _0043()
+        val inputs = arrayOf(
+            arrayOf("123", "456")
+        )
+        val result = arrayOf("56088")
         for (i in inputs.indices) {
             assertEquals(case.exec(inputs[i]).getOrNull(0), result[i])
         }
