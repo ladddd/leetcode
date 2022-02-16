@@ -23,9 +23,12 @@ class TestCases {
                 // 比较一个元素
                 assertEquals(result, caseOutput[0])
             } else if (result is Array<*>) {
-                assertEquals(result.map {
+                val sortedResult = result.map {
                     it.toString()
-                }.toTypedArray(), caseOutput)
+                }.toTypedArray().sortedArray()
+                val sortedOutput = caseOutput.sortedArray()
+                val isEqual = sortedResult.contentEquals(sortedOutput)
+                assertEquals(true, isEqual, "expected: ${sortedResult.contentToString()} \nactual: ${sortedOutput.contentToString()}\n")
             } else {
                 throw Exception("unsupported output type")
             }
@@ -93,6 +96,18 @@ class TestCases {
         testCase("_0071",
             arrayOf("/home//foo/", "/../", "/home/"),
             arrayOf("/home/foo", "/", "/home")
+        )
+    }
+
+    @Test
+    fun test0093() {
+        testCase("_0093",
+            arrayOf("101023", "0000", "25525511135"),
+            arrayOf(
+                arrayOf("1.0.10.23","1.0.102.3","10.1.0.23","10.10.2.3","101.0.2.3"),
+                arrayOf("0.0.0.0"),
+                arrayOf("255.255.11.135", "255.255.111.35"),
+            )
         )
     }
 }

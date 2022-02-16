@@ -2,6 +2,7 @@ package leetcode
 
 import java.util.*
 
+//【栈】
 class _0071:Case {
 
     override fun exec(args: Array<String>): Array<String> {

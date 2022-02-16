@@ -1,5 +1,6 @@
 package leetcode
 
+//【滑动窗口】【双指针】
 class _0567: Case {
 
     override fun exec(args: Array<String>): Array<String> {
