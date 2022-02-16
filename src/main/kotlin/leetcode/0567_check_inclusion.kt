@@ -4,9 +4,7 @@ class _0567: Case {
 
     override fun exec(args: Array<String>): Array<String> {
         if (args.size != 2) return emptyArray()
-        val solution = Solution()
-        val result = solution.checkInclusion2(args[0], args[1])
-        return arrayOf("$result")
+        return arrayOf(Solution().checkInclusion2(args[0], args[1]).toString())
     }
 
     class Solution {

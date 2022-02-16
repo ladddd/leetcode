@@ -87,4 +87,12 @@ class TestCases {
             )
         )
     }
+
+    @Test
+    fun test0071() {
+        testCase("_0071",
+            arrayOf("/home//foo/", "/../", "/home/"),
+            arrayOf("/home/foo", "/", "/home")
+        )
+    }
 }

@@ -4,8 +4,7 @@ class _0043: Case {
 
     override fun exec(args: Array<String>): Array<String> {
         if (args.size != 2) return emptyArray()
-        val solution = Solution()
-        return arrayOf(solution.multiply(args[0], args[1]))
+        return arrayOf(Solution().multiply(args[0], args[1]))
     }
 
     class Solution {

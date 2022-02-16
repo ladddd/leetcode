@@ -5,8 +5,7 @@ import kotlin.math.max
 class _0005: Case {
 
     override fun exec(args: Array<String>): Array<String> {
-        val solution = Solution()
-        return arrayOf(solution.longestPalindrome(args.getOrElse(0) { return emptyArray()}))
+        return arrayOf(Solution().longestPalindrome(args.getOrElse(0) { return emptyArray()}))
     }
 
     class Solution {

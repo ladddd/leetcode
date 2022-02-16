@@ -3,8 +3,7 @@ package leetcode
 class _0014: Case {
 
     override fun exec(args: Array<String>): Array<String> {
-        val solution = Solution()
-        return arrayOf(solution.longestCommonPrefix(args))
+        return arrayOf(Solution().longestCommonPrefix(args))
     }
 
     class Solution {

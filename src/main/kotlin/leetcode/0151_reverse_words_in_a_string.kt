@@ -3,8 +3,7 @@ package leetcode
 class _0151: Case {
 
     override fun exec(args: Array<String>): Array<String> {
-        val solution = Solution()
-        return arrayOf(solution.reverseWords2(args.getOrElse(0) { return emptyArray()}))
+        return arrayOf(Solution().reverseWords2(args.getOrElse(0) { return emptyArray()}))
     }
 
     class Solution {
