@@ -126,4 +126,20 @@ class TestCases {
             )
         )
     }
+
+    @Test
+    fun test0685() {
+        val case = _0695()
+        val result = case.exec(arrayOf(
+            intArrayOf(0,0,1,0,0,0,0,1,0,0,0,0,0),
+            intArrayOf(0,0,0,0,0,0,0,1,1,1,0,0,0),
+            intArrayOf(0,1,1,0,1,0,0,0,0,0,0,0,0),
+            intArrayOf(0,1,0,0,1,1,0,0,1,0,1,0,0),
+            intArrayOf(0,1,0,0,1,1,0,0,1,1,1,0,0),
+            intArrayOf(0,0,0,0,0,0,0,0,0,0,1,0,0),
+            intArrayOf(0,0,0,0,0,0,0,1,1,1,0,0,0),
+            intArrayOf(0,0,0,0,0,0,0,1,1,0,0,0,0),
+        ))
+        assertEquals(6, result)
+    }
 }

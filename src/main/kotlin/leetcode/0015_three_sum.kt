@@ -1,5 +1,6 @@
 package leetcode
 
+// 【双指针】
 class _0015: Case {
 
     override fun exec(args: Array<String>): Array<String> {
