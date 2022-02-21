@@ -115,9 +115,13 @@ class TestCases {
     fun test0015() {
         testCase("_0015",
             arrayOf(
+                arrayOf(),
+                arrayOf(0),
                 arrayOf(-1,0,1,2,-1,-4)
             ),
             arrayOf(
+                arrayOf(),
+                arrayOf(),
                 arrayOf("[-1,-1,2]", "[-1,0,1]")
             )
         )
