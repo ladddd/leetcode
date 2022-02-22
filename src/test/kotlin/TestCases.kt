@@ -142,4 +142,14 @@ class TestCases {
         ))
         assertEquals(6, result)
     }
+
+    @Test
+    fun test0033() {
+        val case = _0033()
+        val result = case.exec(
+            intArrayOf(4,5,6,7,0,1,2),
+            3
+        )
+        assertEquals(-1, result)
+    }
 }
