@@ -22,6 +22,8 @@ class TestCases {
             if (result is String) {
                 // 比较一个元素
                 assertEquals(result, caseOutput[0])
+            } else if (result is Number) {
+                assertEquals(result.toString(), caseOutput[0])
             } else if (result is Array<*>) {
                 val sortedResult = result.map {
                     it.toString()
@@ -151,5 +153,15 @@ class TestCases {
             3
         )
         assertEquals(-1, result)
+    }
+
+    @Test
+    fun test0674() {
+        testCase("_0674",
+            arrayOf(
+                arrayOf(1,3,5,7)
+            ),
+            arrayOf(4)
+        )
     }
 }
