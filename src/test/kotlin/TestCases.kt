@@ -164,4 +164,14 @@ class TestCases {
             arrayOf(4)
         )
     }
+
+    @Test
+    fun test0215() {
+        val case = _0215()
+        val result = case.exec(
+            intArrayOf(3,2,1,5,6,4),
+            2
+        )
+        assertEquals(5, result)
+    }
 }
