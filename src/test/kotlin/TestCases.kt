@@ -220,4 +220,30 @@ class TestCases {
         ))
         assertEquals(1, result)
     }
+
+    @Test
+    fun test0056() {
+        val case = _0056()
+        val output = case.exec(arrayOf(
+//            intArrayOf(1,3),
+//            intArrayOf(2,6),
+//            intArrayOf(8,10),
+//            intArrayOf(15,18),
+            intArrayOf(1,4),
+            intArrayOf(0,1),
+        ))
+        val outputStr = output.joinToString(",","[","]",-1,"") {
+            it.contentToString()
+        }
+        val result = arrayOf(
+//            intArrayOf(1,6),
+//            intArrayOf(8,10),
+//            intArrayOf(15,18),
+            intArrayOf(0,4)
+        )
+        val resultStr = result.joinToString(",","[","]",-1,"") {
+            it.contentToString()
+        }
+        assertEquals(outputStr, resultStr)
+    }
 }
