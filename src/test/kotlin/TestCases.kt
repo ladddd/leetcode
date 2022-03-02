@@ -195,10 +195,12 @@ class TestCases {
     fun test0060() {
         testCase("_0060",
             arrayOf(
-                arrayOf(3, 3)
+                arrayOf(3, 3),
+                arrayOf(4, 9)
             ),
             arrayOf(
-                "213"
+                "213",
+                "2314"
             )
         )
     }
