@@ -204,4 +204,20 @@ class TestCases {
             )
         )
     }
+
+    @Test
+    fun test0547() {
+        val case = _0547()
+        val result = case.exec(arrayOf(
+            intArrayOf(1, 1, 1),
+            intArrayOf(1, 1, 1),
+            intArrayOf(1, 1, 1)
+//            intArrayOf(1, 1, 1, 1, 1),
+//            intArrayOf(1, 1, 1, 1, 1),
+//            intArrayOf(1, 1, 1, 1, 1),
+//            intArrayOf(1, 1, 1, 1, 1),
+//            intArrayOf(1, 1, 1, 1, 1),
+        ))
+        assertEquals(1, result)
+    }
 }

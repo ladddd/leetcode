@@ -2,7 +2,7 @@ package leetcode
 
 import java.lang.StringBuilder
 
-//【回溯】【康托展开】【DFS】【逆康托展开】
+//【回溯】【逆康托展开】
 class _0060: Case {
 
     override fun exec(args: Array<String>): Array<String> {
