@@ -246,4 +246,16 @@ class TestCases {
         }
         assertEquals(outputStr, resultStr)
     }
+
+    @Test
+    fun test0042() {
+        testCase("_0042",
+            arrayOf(
+                arrayOf(0,1,0,2,1,0,1,3,2,1,2,1)
+            ),
+            arrayOf(
+                6
+            )
+        )
+    }
 }
