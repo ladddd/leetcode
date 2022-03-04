@@ -10,7 +10,7 @@ class TestCases {
     private fun testCase(caseName: String, inputs: Array<*>, results: Array<*>) {
         val packageName = "leetcode"
         val className = "$packageName.$caseName"
-        val case = Class.forName(className).getDeclaredConstructor().newInstance() as Case
+        val case = Class.forName(className).getDeclaredConstructor().newInstance() as? Case ?: throw AssertionError("case $caseName is not inherit from Case")
         for (i in inputs.indices) {
             val caseInput = when (val input = inputs[i]) {
                 is String -> arrayOf(input)
