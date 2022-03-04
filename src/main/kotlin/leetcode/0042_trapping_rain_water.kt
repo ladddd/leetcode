@@ -4,16 +4,43 @@ package leetcode
 class _0042: Case {
 
     override fun exec(args: Array<String>): Array<String> {
-        return arrayOf(Solution().trap3(args.map { it.toInt() }.toIntArray()).toString())
+        return arrayOf(Solution().trap(args.map { it.toInt() }.toIntArray()).toString())
     }
 
     class Solution {
+        // 动态规划 + 双指针优化内存开销。最终达到O(n)的时间复杂度，和O(1)的空间复杂度
         fun trap(height: IntArray): Int {
-            return 0
+            var result = 0
+            // 不再遍历计算所有的左侧最高和右侧最高
+            var maxLeft = 0
+            var maxRight = 0
+            // 双指针
+            var left = 1
+            var right = height.size - 2
+            // 第一格和最后一格一定没有积水, 需要 height.size-2 次完成遍历
+            for (i in 1 until height.size - 1) {
+                // 右侧挡板比左侧高，left位置可能有积水
+                if (height[left - 1] < height[right + 1]) {
+                    maxLeft = if (height[left - 1] > maxLeft) height[left - 1] else maxLeft
+                    // 再判断左侧挡板是否比当前位置高
+                    if (maxLeft > height[left]) {
+                        result += maxLeft - height[left]
+                    }
+                    left++
+                } else {
+                    maxRight = if (height[right + 1] > maxRight) height[right + 1] else maxRight
+                    if (maxRight > height[right]) {
+                        result += maxRight - height[right]
+                    }
+                    right--
+                }
+            }
+            return result
         }
 
         // 空间换时间，用两个数组分别保存每一列的"左侧最高"和"右侧最高"
         // 这样，每次找左右两侧最高值的时候就不用遍历一侧所有的元素了
+        // 时间复杂度从按行按列求和的O(n平方)变成O(n), 空间复杂度则从O(1)变为O(n)
         fun trap3(height: IntArray): Int {
             var result = 0
             val maxLefts = IntArray(height.size) { 0 }
