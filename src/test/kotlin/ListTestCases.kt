@@ -40,4 +40,18 @@ class ListTestCases {
             )
         )
     }
+
+    @Test
+    fun test0002() {
+        testListNodeCase("_0002",
+            arrayOf(
+                arrayOf(ListNode.fromString("9,9,9,9,9,9,9")!!, ListNode.fromString("9,9,9,9")!!),
+                arrayOf(ListNode.fromString("2,4,3")!!, ListNode.fromString("5,6,4")!!)
+            ),
+            arrayOf(
+                arrayOf(ListNode.fromString("8,9,9,9,0,0,0,1")!!),
+                arrayOf(ListNode.fromString("7,0,8")!!)
+            )
+        )
+    }
 }
