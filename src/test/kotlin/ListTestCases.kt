@@ -54,4 +54,12 @@ class ListTestCases {
             )
         )
     }
+
+    @Test
+    fun test0148() {
+        testListNodeCase("_0148",
+            arrayOf(arrayOf(ListNode.fromString("-1,5,3,4,0")!!)),
+            arrayOf(arrayOf(ListNode.fromString("-1,0,3,4,5")!!))
+        )
+    }
 }
