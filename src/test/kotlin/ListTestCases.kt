@@ -28,4 +28,16 @@ class ListTestCases {
             )
         )
     }
+
+    @Test
+    fun test0206() {
+        testListNodeCase("_0206",
+            arrayOf(
+                arrayOf(ListNode.fromString("1,2,3,4,5")!!)
+            ),
+            arrayOf(
+                arrayOf(ListNode.fromString("5,4,3,2,1")!!)
+            )
+        )
+    }
 }
