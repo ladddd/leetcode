@@ -71,4 +71,16 @@ class ListTestCases {
             arrayOf(arrayOf(head.get(1)!!))
         )
     }
+
+    @Test
+    fun test0160() {
+        val list1 = ListNode.fromString("4,1,8,4,5")
+        val list2 = ListNode.fromString("5,6,1")
+        list2?.get(2)?.next = list1?.get(2)
+        list2?.get(3)?.next = ListNode.fromString("4,5")
+        testListNodeCase("_0160",
+            arrayOf(arrayOf(list1!!, list2!!)),
+            arrayOf(arrayOf(ListNode.fromString("8,4,5")!!))
+        )
+    }
 }
