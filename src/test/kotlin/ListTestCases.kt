@@ -83,4 +83,23 @@ class ListTestCases {
             arrayOf(arrayOf(ListNode.fromString("8,4,5")!!))
         )
     }
+
+    @Test
+    fun test0023() {
+        // [1,4,5],[1,3,4],[2,6]
+        testListNodeCase("_0023",
+            arrayOf(
+                arrayOf(
+                    ListNode.fromString("1,4,5")!!,
+                    ListNode.fromString("1,3,4")!!,
+                    ListNode.fromString("2,6")!!,
+                )
+            ),
+            arrayOf(
+                arrayOf(
+                    ListNode.fromString("1,1,2,3,4,4,5,6")!!,
+                )
+            )
+        )
+    }
 }
