@@ -62,4 +62,13 @@ class ListTestCases {
             arrayOf(arrayOf(ListNode.fromString("-1,0,3,4,5")!!))
         )
     }
+
+    @Test
+    fun test0142() {
+        val head = ListNode.cycleListFromString("3,2,0,-4", 1)!!
+        testListNodeCase("_0142",
+            arrayOf(arrayOf(head)),
+            arrayOf(arrayOf(head.get(1)!!))
+        )
+    }
 }
