@@ -10,7 +10,7 @@ interface Executable<In, Out> {
     fun exec(args: Array<In>): Array<Out>
 }
 
-interface ListNodeCase: Executable<ListNode, ListNode>
+interface ListNodeCase : Executable<ListNode, ListNode>
 
 class ListNode(var `val`: Int) {
     var next: ListNode? = null
@@ -116,4 +116,9 @@ class ListNode(var `val`: Int) {
             return head
         }
     }
+}
+
+class TreeNode(var `val`: Int = 0) {
+    var left: TreeNode? = null
+    var right: TreeNode? = null
 }
