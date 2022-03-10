@@ -272,4 +272,16 @@ class TestCases {
             )
         )
     }
+
+    @Test
+    fun test0122() {
+        testCase("_0122",
+            arrayOf(
+                arrayOf(7,1,5,3,6,4),
+            ),
+            arrayOf(
+                arrayOf(7)
+            )
+        )
+    }
 }
