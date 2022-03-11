@@ -296,4 +296,20 @@ class TestCases {
         ))
         assertEquals(4, result)
     }
+
+    @Test
+    fun test0053() {
+        testCase("_0053",
+            arrayOf(
+                arrayOf(-1),
+                arrayOf(1),
+                arrayOf(-2,1,-3,4,-1,2,1,-5,4)
+            ),
+            arrayOf(
+                arrayOf(-1),
+                arrayOf(1),
+                arrayOf(6)
+            )
+        )
+    }
 }
