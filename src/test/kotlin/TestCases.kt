@@ -312,4 +312,18 @@ class TestCases {
             )
         )
     }
+
+    @Test
+    fun test0120() {
+        val case = _0120()
+        val result = case.exec(
+            arrayListOf(
+                arrayListOf(2),
+                arrayListOf(3,4),
+                arrayListOf(5,6,7),
+                arrayListOf(4,1,8,3),
+            )
+        )
+        assertEquals(11, result)
+    }
 }
