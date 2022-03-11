@@ -284,4 +284,16 @@ class TestCases {
             )
         )
     }
+
+    @Test
+    fun test0211() {
+        val case = _0211()
+        val result = case.exec(arrayOf(
+            charArrayOf('1','0','1','0','0'),
+            charArrayOf('1','0','1','1','1'),
+            charArrayOf('1','1','1','1','1'),
+            charArrayOf('1','0','0','1','0'),
+        ))
+        assertEquals(4, result)
+    }
 }
