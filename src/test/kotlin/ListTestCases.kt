@@ -4,6 +4,7 @@ import org.junit.runner.RunWith
 import org.junit.runners.JUnit4
 import kotlin.test.assertEquals
 
+// 链表用例
 @RunWith(JUnit4::class)
 class ListTestCases {
 

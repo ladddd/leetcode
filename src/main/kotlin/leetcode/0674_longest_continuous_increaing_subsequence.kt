@@ -9,7 +9,7 @@ class _0674: Case {
 
     class Solution {
 
-        // 贪心 O(n) = n
+        // 贪心 O(n)
         fun findLengthOfLCIS(nums: IntArray): Int {
             if (nums.size < 2) return nums.size
             var result = 1
@@ -24,5 +24,9 @@ class _0674: Case {
             }
             return result
         }
+
+        // todo
+        // dp+二分 O(logn)
+
     }
 }

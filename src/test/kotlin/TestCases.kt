@@ -326,4 +326,29 @@ class TestCases {
         )
         assertEquals(11, result)
     }
+
+    @Test
+    fun test0354() {
+        val case = _0354()
+//        val result = case.exec(
+//            arrayOf(
+//                intArrayOf(4,5),
+//                intArrayOf(4,6),
+//                intArrayOf(6,7),
+//                intArrayOf(2,3),
+//                intArrayOf(1,1),
+//            )
+//        )
+//        assertEquals(4, result)
+        //[[5,4],[6,4],[6,7],[2,3]]
+        val result = case.exec(
+            arrayOf(
+                intArrayOf(5,4),
+                intArrayOf(6,4),
+                intArrayOf(6,7),
+                intArrayOf(2,3),
+            )
+        )
+        assertEquals(3, result)
+    }
 }
