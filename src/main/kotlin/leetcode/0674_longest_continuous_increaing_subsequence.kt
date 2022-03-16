@@ -25,8 +25,32 @@ class _0674: Case {
             return result
         }
 
-        // todo
-        // dp+二分 O(logn)
+        // *延伸* 输出最长递增子序列序列
+        // dp+二分 O(nlogn)
+        fun findLCIS(nums: IntArray): IntArray {
+            if (nums.isEmpty()) return intArrayOf()
+            val sorted = nums.sortedArray()
+            val result = ArrayList<Int>()
+            result.add(nums[0])
+            for (i in 1 until sorted.size) {
+                var low = 0
+                var high = result.size - 1
+                while (low <= high) {
+                    val mid = (low + high) / 2
+                    if (result[mid] < sorted[i]) {
+                        low = mid + 1
+                    } else {
+                        high = mid
+                    }
+                }
+                if (low >= result.size) {
+                    result.add(nums[low])
+                } else {
+                    result[low] = nums[low]
+                }
+            }
+            return result.toIntArray()
+        }
 
     }
 }

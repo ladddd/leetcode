@@ -2,6 +2,7 @@ package leetcode
 
 import java.util.*
 
+//【栈】【数据结构】
 class _0155 {
 
     // 设计一个栈，要求尽可能快速的找到栈中的最小值

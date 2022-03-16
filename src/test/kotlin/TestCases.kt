@@ -351,4 +351,9 @@ class TestCases {
         )
         assertEquals(3, result)
     }
+
+    @Test
+    fun test0146() {
+        assertEquals(true, _0146().exec())
+    }
 }
