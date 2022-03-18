@@ -361,4 +361,24 @@ class TestCases {
     fun test0432() {
         assertEquals(true, _0432().exec())
     }
+
+    @Test
+    fun test0069() {
+        testCase("_0069",
+            arrayOf(
+                arrayOf(2147395599),
+                arrayOf(4),
+                arrayOf(8),
+                arrayOf(0),
+                arrayOf(1),
+            ),
+            arrayOf(
+                arrayOf(46339),
+                arrayOf(2),
+                arrayOf(2),
+                arrayOf(0),
+                arrayOf(1),
+            )
+        )
+    }
 }
