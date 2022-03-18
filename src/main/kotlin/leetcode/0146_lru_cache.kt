@@ -1,6 +1,6 @@
 package leetcode
 
-//【哈希】【链表】【数据结构】
+//【哈希】【链表】【数据结构】【LRU】
 class _0146 {
 
     fun exec(): Boolean {
@@ -20,7 +20,7 @@ class _0146 {
     // 插入：新元素从队头插入，队尾元素出队；
     class LRUCache(val capacity: Int) {
         val map = HashMap<Int, Int>()
-        val deque = ArrayDeque<Int>()
+        val deque = ArrayDeque<Int>() // ArrayDeque的性能比LinkedList要好（LinkedList的每次插入都需要动态扩容， 分配内存）
 
         fun get(key: Int): Int {
             val result = map.getOrElse(key) { return -1 }
