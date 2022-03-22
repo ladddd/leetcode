@@ -1,6 +1,7 @@
 package leetcode
 
 //【位运算】【数据结构】【贪心】
+@Suppress("unused", "ClassName")
 class _0393: Case {
 
     override fun exec(args: Array<String>): Array<String> {
