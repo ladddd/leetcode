@@ -381,4 +381,20 @@ class TestCases {
             )
         )
     }
+
+    @Test
+    fun test0393() {
+        testCase("_0393",
+            arrayOf(
+                arrayOf(230,136,145),
+                arrayOf(197,130,1),
+                arrayOf(235,140,4)
+            ),
+            arrayOf(
+                arrayOf("true"),
+                arrayOf("true"),
+                arrayOf("false"),
+            )
+        )
+    }
 }
