@@ -391,9 +391,21 @@ class TestCases {
                 arrayOf(235,140,4)
             ),
             arrayOf(
-                arrayOf("true"),
-                arrayOf("true"),
-                arrayOf("false"),
+                "true","true","false"
+            )
+        )
+    }
+
+    @Test
+    fun test0020() {
+        testCase("_0020",
+            arrayOf(
+                arrayOf("(){}}{"),
+                arrayOf("([)]"),
+                arrayOf("["),
+            ),
+            arrayOf(
+                "false", "false", "false"
             )
         )
     }
