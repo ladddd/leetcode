@@ -13,6 +13,7 @@ class TestCases {
         val case = Class.forName(className).getDeclaredConstructor().newInstance() as? Case ?: throw AssertionError("case $caseName is not inherit from Case")
         for (i in inputs.indices) {
             val caseInput = when (val input = inputs[i]) {
+                is Int, Float, Double, Long -> arrayOf(input.toString())
                 is String -> arrayOf(input)
                 is Array<*> -> input.map { it.toString() }.toTypedArray()
                 else -> throw Exception("unsupported inputs type")
@@ -406,6 +407,18 @@ class TestCases {
             ),
             arrayOf(
                 "false", "false", "false"
+            )
+        )
+    }
+
+    @Test
+    fun test0070() {
+        testCase("_0070",
+            arrayOf(
+                2,3
+            ),
+            arrayOf(
+                2,3
             )
         )
     }
