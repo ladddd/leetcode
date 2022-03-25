@@ -30,6 +30,21 @@ class _0169: Case {
             return nums.sorted()[nums.size/2]
         }
 
+        // boyer-moore字符串搜索算法
+        fun majorityElement4(nums: IntArray): Int {
+            var candidate: Int? = null
+            var count = 0
+
+            for (num in nums) {
+                if (count == 0) {
+                    // 计数变0，不是该元素，改变候选
+                    candidate = num
+                }
+                count += if (candidate == num) 1 else -1
+            }
+            return candidate ?: 0
+        }
+
         // 分治
         fun majorityElement3(nums: IntArray): Int {
             return majorityElementOfPart(nums, 0, nums.size - 1)
