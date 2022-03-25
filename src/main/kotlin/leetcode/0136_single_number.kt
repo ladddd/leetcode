@@ -21,5 +21,14 @@ class _0136: Case {
             }
             return set.firstOrNull() ?: 0
         }
+
+        // 使用位运算，两个相同数字做异或得0: 0 xor n = n; n xor n = 0
+        fun singleNumber2(nums: IntArray): Int {
+            var result = 0
+            for (n in nums) {
+                result = result xor n
+            }
+            return result
+        }
     }
 }
