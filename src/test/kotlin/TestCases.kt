@@ -434,4 +434,16 @@ class TestCases {
             )
         )
     }
+
+    @Test
+    fun test0338() {
+        testCase("_0338",
+            arrayOf(
+                2
+            ),
+            arrayOf(
+                arrayOf(0,1,1)
+            )
+        )
+    }
 }
