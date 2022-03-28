@@ -17,9 +17,10 @@ class _0338: Case {
             val result = IntArray(n+1) { 0 }
             var highBit = 0
             for (i in 1..n) {
-                // highBit 是最靠近i的，首位为1，其余全0的数
+                // highBit 是最靠近i的，首位为1，其余全0的数(2的x次幂)
                 // 更新highBit
-                highBit = if (i % 2 == 0) i else highBit
+                // i-1全1
+                highBit = if (i and (i-1) == 0) i else highBit
                 // i - highBit 一定是之前计算过的值
                 result[i] = result[i - highBit] + 1
             }
