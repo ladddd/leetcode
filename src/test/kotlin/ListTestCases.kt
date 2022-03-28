@@ -103,4 +103,11 @@ class ListTestCases {
             )
         )
     }
+
+    @Test
+    fun test0234() {
+        val list = ListNode.fromString("1")
+        val result = _0234().exec(list)
+        assertEquals(true, result)
+    }
 }
