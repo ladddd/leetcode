@@ -472,4 +472,14 @@ class TestCases {
             )
         )
     }
+
+    @Test
+    fun test0017() {
+        testCase("_0017",
+            arrayOf("23"),
+            arrayOf(
+                arrayOf("ad","ae","af","bd","be","bf","cd","ce","cf")
+            )
+        )
+    }
 }
