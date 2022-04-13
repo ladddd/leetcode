@@ -482,4 +482,20 @@ class TestCases {
             )
         )
     }
+
+    @Test
+    fun test0031() {
+        testCase("_0031",
+            arrayOf(
+                "2,1,2,2,2,2,2,1",
+                "1,2,3",
+                "3,2,1",
+            ),
+            arrayOf(
+                arrayOf<String>(),
+                arrayOf<String>(),
+                arrayOf<String>(),
+            )
+        )
+    }
 }
