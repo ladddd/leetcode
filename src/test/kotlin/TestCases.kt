@@ -498,4 +498,12 @@ class TestCases {
             )
         )
     }
+
+    @Test
+    fun test052() {
+        testCase("_0152",
+            arrayOf("2,3,-2,4"),
+            arrayOf(6)
+        )
+    }
 }
