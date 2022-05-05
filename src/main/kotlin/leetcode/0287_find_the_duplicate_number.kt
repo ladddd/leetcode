@@ -25,4 +25,5 @@ class _0287 {
             return result
         }
     }
+    // todo 二分法
 }
