@@ -506,4 +506,10 @@ class TestCases {
             arrayOf(6)
         )
     }
+
+    @Test
+    fun test0322() {
+        val case = _0322()
+        assertEquals(case.exec(intArrayOf(2), 3), -1)
+    }
 }
