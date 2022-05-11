@@ -522,4 +522,16 @@ class TestCases {
             arrayOf(3)
         )
     }
+
+    @Test
+    fun test0301() {
+        val case = _0301()
+//        val result = case.exec("(a)())()")
+        val result = case.exec("(j))(")
+//        val result = case.exec(")(")
+//        val expect = arrayListOf("(a())()","(a)()()")
+        val expect = arrayListOf("(j)")
+//        val expect = arrayListOf("")
+        assertEquals(result.toTypedArray().contentEquals(expect.toTypedArray()), true)
+    }
 }
