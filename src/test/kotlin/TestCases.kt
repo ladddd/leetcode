@@ -534,4 +534,18 @@ class TestCases {
 //        val expect = arrayListOf("")
         assertEquals(result.toTypedArray().contentEquals(expect.toTypedArray()), true)
     }
+
+    @Test
+    fun test0394() {
+        testCase("_0394",
+            arrayOf(
+                "3[a]2[bc]",
+                "3[a2[c]]"
+            ),
+            arrayOf(
+                "aaabcbc",
+                "accaccacc"
+            )
+        )
+    }
 }
