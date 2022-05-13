@@ -548,4 +548,22 @@ class TestCases {
             )
         )
     }
+
+    @Test
+    fun test0399() {
+        val case = _0399()
+        case.exec(
+            listOf(
+                listOf("a", "b"),
+                listOf("e", "f"),
+                listOf("b", "e")
+            ),
+            doubleArrayOf(
+                3.4, 1.4, 2.3
+            ),
+            listOf(
+                listOf("a", "f"),
+            )
+        )
+    }
 }
