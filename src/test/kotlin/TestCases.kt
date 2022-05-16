@@ -566,4 +566,10 @@ class TestCases {
             )
         )
     }
+
+    @Test
+    fun test0297() {
+        val case = _0297()
+        case.exec("[1,2,3,null,null,4,5]")
+    }
 }
