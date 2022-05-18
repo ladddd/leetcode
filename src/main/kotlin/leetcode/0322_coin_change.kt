@@ -1,6 +1,6 @@
 package leetcode
 
-//【dp】【背包问题】
+//【dp】【背包问题】【完全背包】
 class _0322 {
 
     fun exec(coins: IntArray, amount: Int): Int {
