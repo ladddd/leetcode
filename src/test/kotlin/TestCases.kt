@@ -572,4 +572,12 @@ class TestCases {
         val case = _0297()
         case.exec("[1,2,3,null,null,4,5]")
     }
+
+    @Test
+    fun test0125() {
+        testCase("_0125",
+            arrayOf("race a car"),
+            arrayOf("false")
+        )
+    }
 }
