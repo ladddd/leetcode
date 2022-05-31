@@ -580,4 +580,16 @@ class TestCases {
             arrayOf("false")
         )
     }
+
+    @Test
+    fun test0067() {
+        testCase("_0067",
+            arrayOf(
+                arrayOf("0", "0")
+            ),
+            arrayOf(
+                "0"
+            )
+        )
+    }
 }
