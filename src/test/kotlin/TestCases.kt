@@ -592,4 +592,10 @@ class TestCases {
             )
         )
     }
+
+    @Test
+    fun test0108() {
+        val case = _0108()
+        case.exec(intArrayOf(-10,-3,0,5,9))
+    }
 }
