@@ -598,4 +598,20 @@ class TestCases {
         val case = _0108()
         case.exec(intArrayOf(-10,-3,0,5,9))
     }
+
+    @Test
+    fun test0532() {
+        testCase("_0532",
+            arrayOf(
+                arrayOf("1,2,3,4,5", "1"),
+                arrayOf("1,2,4,4,3,3,0,9,2,3", "3"),
+                arrayOf("3,1,4,1,5", "2")
+            ),
+            arrayOf(
+                4,
+                2,
+                2
+            )
+        )
+    }
 }
