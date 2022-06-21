@@ -1,32 +1,15 @@
 package leetcode
 
 //【数组】
-class _0349 {
+class _0350 {
+    // 数组交集，计算重复元素（349 重复元素记为1个）
+    // 把数据格式从set换成arraylist即可
     class Solution {
-        // 要求交集中无重复值
-
-        fun intersection(nums1: IntArray, nums2: IntArray): IntArray {
-            val map = hashMapOf<Int, Int?>()
-            for (num in nums1) {
-                map[num] = 1
-            }
-            for (num in nums2) {
-                map[num] = if (map[num] == null) null else 0
-            }
-            val result = ArrayList<Int>()
-            for (key in map.keys) {
-                if (map[key] == 0) {
-                    result.add(key)
-                }
-            }
-            return result.toIntArray()
-        }
-
-        fun intersection2(nums1: IntArray, nums2: IntArray): IntArray {
+        fun intersect(nums1: IntArray, nums2: IntArray): IntArray {
             if (nums1.isEmpty() || nums2.isEmpty()) {
                 return intArrayOf()
             }
-            val result = HashSet<Int>()
+            val result = ArrayList<Int>()
             val small: IntArray
             val big: IntArray
             if (nums1.size < nums2.size) {
