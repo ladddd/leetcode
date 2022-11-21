@@ -614,4 +614,17 @@ class TestCases {
             )
         )
     }
+    @Test
+    fun test0775() {
+        testCase("_0775",
+            arrayOf(
+                "1,2,0",
+                "0,1,2"
+            ),
+            arrayOf(
+                "false",
+                "true"
+            )
+        )
+    }
 }
